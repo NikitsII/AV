@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p>
+    <button onclick="playMus()" id="buttonPlay" >PLAY</button>
+  </p>
+  <select id="list" onchange="changeMus()" onclick="doublePlayMus()">
+			<option value = '1'>Wake Me Up</option>
+			<option value = '2'>Lean On</option>
+			<option value = '3'>Ain't Nobody</option>
+      <option value = '4'>[radiorecord1]</option>
+      <option value = '5'>[radiorecord2]</option>
+      <option value = '6'>[Zaycev1]</option>
+      <option value = '7'>[Zaycev2]</option>
+	</select>
+  <p id="text" style="top:110px; left: 10px;" >Number of particles:</p>
+  <p>
+    <input type="range" min="20" max="300" id="dotsLength" oninput="changeDotsLength()" value="100">
+  </p>
+  <body id="body"> 
+	<h1 id="click">•••Paused!•••</h1>
+	<h2 id="play">GO!</h2>
+	<audio id="audio" src="1.mp3" controls preload></audio>
+  <p id="audioFile">
+      <input type="text" id='music' onclick='doublePlayMus();select(this)' value='Insert the download link' style='width:203px'>
+      <button onclick="uploadAudio()"> apply</button>
+  </p>
+	<canvas id="dot"></canvas>
+	<canvas id="ring"></canvas>
+	<div id="ring"></div>
+	<div id="logo"></div>
+	<script src="script.js">
+	</script>
+  </body>
+</body>
+
+</html>
